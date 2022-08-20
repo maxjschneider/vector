@@ -1,0 +1,12 @@
+﻿<Window x:Class="charmap.Selector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:charmap"
+        mc:Ignorable="d"
+        Title="Selector" Height="98.63" Width="260" Loaded="Window_Loaded" AllowsTransparency="True" ResizeMode="NoResize" Cursor="Cross" WindowStyle="None" Background="#FF595959" Opacity="0.4" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseLeftButtonUp="Window_MouseLeftButtonUp" MouseMove="Window_MouseMove">
+
+    <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="99" VerticalAlignment="Top" Width="260" />
+    
+</Window>

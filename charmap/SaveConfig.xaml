@@ -1,0 +1,49 @@
+﻿<Window x:Class="charmap.SaveConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:charmap"
+        mc:Ignorable="d"
+        Title="Save Config" Height="188.962" Width="170.599" ResizeMode="NoResize">
+    <Grid Background="Black">
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Height="23" Margin="10,33,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="138" BorderBrush="#FF252525" Background="Black" Foreground="White"/>
+        <Label Content="Config Name" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Save" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="58" Background="Black" BorderBrush="{x:Null}" Foreground="MediumVioletRed" Style="{DynamicResource ResourceKey=FlatButton}" Height="26" RenderTransformOrigin="0.498,0.858">
+            <Button.Resources>
+                <Style x:Key="FlatButton" TargetType="{x:Type Button}">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                    <Setter Property="BorderThickness" Value="1"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="VerticalContentAlignment" Value="Center"/>
+                    <Setter Property="Padding" Value="1"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                                    <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" OpacityMask="Black"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsDefaulted" Value="true">
+                                        <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="true">
+                                        <Setter Property="Background" TargetName="border" Value="Black"/>
+                                        <Setter Property="BorderBrush" TargetName="border" Value="#FF191919"/>
+                                    </Trigger>
+                                    <Trigger Property="IsPressed" Value="true">
+                                        <Setter Property="Background" TargetName="border" Value="#FF191919"/>
+                                        <Setter Property="BorderBrush" TargetName="border" Value="Black"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <CheckBox x:Name="GunsCheck" Content="guns and attachments" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Height="19" Foreground="White"/>
+        <CheckBox x:Name="RandomCheck" Content="randomization" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Height="19" Foreground="White"/>
+
+    </Grid>
+</Window>

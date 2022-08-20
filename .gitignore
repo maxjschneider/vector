@@ -1,0 +1,14 @@
+x64/
+Release/
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+obj/
+bin/
+*.csproj
+*.csproj.user
+*.7z
+packages/
+Payload/
